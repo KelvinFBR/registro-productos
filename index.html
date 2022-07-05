@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/darkly/bootstrap.min.css"
+    />
+
+    <title>Registro de Productos</title>
+  </head>
+  <body>
+    <main class="d-flex flex-row flex-wrap mb-3">
+      <section class="container d-flex flex-row mt-5 w-75">
+        <form class="card card-body w-75">
+          <div class="form-group mt-2">
+            <label for="nameProduct">Nombre del producto:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nameProduct"
+              aria-describedby="emailHelp"
+              placeholder="Producto"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="amount-product">Cantidad:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="amount-product"
+              placeholder="Introduzca la cantidad"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="priceProduct">Precio:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="priceProduct"
+              placeholder="Intruduzca el precio"
+            />
+          </div>
+          <div>
+            <button type="submit" class="btn btn-success mt-2">
+              Registrar
+            </button>
+            <button type="submit" class="btn btn-primary mt-2">
+              Restablecer
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="container mt-5 d-flex justify-content-center w-75">
+        <table class="table table-dark table-sm text-center align-middle">
+          <thead class="">
+            <th>#</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>cantidad</th>
+            <th>Accion</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Televisores</td>
+              <td>12000</td>
+              <td>500</td>
+              <td>
+                <button class="btn btn-primary">Actualizar</button>
+                <button class="m-2 btn btn-danger">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <template id="row-product">
+      <tr>
+        <td>1</td>
+        <td>Televisores</td>
+        <td>12000</td>
+        <td>500</td>
+        <td class="">
+          <button class="m-2 btn btn-primary">Actualizar</button>
+          <button class="m-2 btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
+    </template>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
