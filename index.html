@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/registro-productos/assets/favicon.17e50649.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/darkly/bootstrap.min.css"
+    />
+
+    <title>Registro de Productos</title>
+    <script type="module" crossorigin src="/registro-productos/assets/index.9c3c48fe.js"></script>
+  </head>
+  <body>
+    <main class="d-flex flex-row flex-wrap mb-3">
+      <section class="container d-flex flex-row mt-5 w-75">
+        <form id="form" class="card card-body w-75">
+          <div class="form-group mt-2">
+            <label for="product-name">Nombre del producto:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="product-name"
+              aria-describedby="emailHelp"
+              placeholder="Producto"
+              required
+              name="name"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="product-amount">Cantidad:</label>
+            <input
+              required
+              type="number"
+              class="form-control"
+              id="product-amount"
+              placeholder="Introduzca la cantidad"
+              name="amount"
+            />
+          </div>
+          <div class="form-group mt-2">
+            <label for="product-price">Precio:</label>
+            <input
+              required
+              type="number"
+              class="form-control"
+              id="product-price"
+              placeholder="Intruduzca el precio"
+              name="price"
+            />
+          </div>
+          <div>
+            <button type="submit" class="btn btn-success mt-2">
+              Registrar
+            </button>
+            <button type="reset" class="btn btn-primary mt-2">
+              Restablecer
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="container mt-5 d-flex justify-content-center w-75">
+        <table class="table table-dark table-sm text-center align-middle">
+          <thead class="">
+            <th>#</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>cantidad</th>
+            <th>Accion</th>
+          </thead>
+          <tbody id="body-table"></tbody>
+          <tfoot id="footer-table d-flex flex-row">
+            <tr class="w-100">
+              <td colspan="3" class="w-50">
+                Precio Total: <span id="total-price">0</span>
+              </td>
+              <td colspan="3" class="w-50">
+                Cantidad Total: <span id="total-amount">0</span>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+
+    <template id="row-product">
+      <tr>
+        <td class="id"></td>
+        <td class="text-capitalize name"></td>
+        <td class="price"></td>
+        <td class="amount"></td>
+        <td>
+          <button id="btn-update" class="btn btn-primary">Actualizar</button>
+          <button id="btn-delete" class="m-2 btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
+    </template>
+
+    
+  </body>
+</html>
